@@ -1,1 +1,0 @@
-gameScore = 0;
