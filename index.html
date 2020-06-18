@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Snake Game</title>
+  
+</head>
+
+<body>
+
+  <header class="gameTitle">
+    <h1 game-title> Snake Game</h1>
+    
+  </header>
+  <span id="score"> </span>
+<section class="designCanvas">
+   <canvas id="canvas" width="400" height="400"></canvas>
+   
+  </section> 
+  
+   <span id="time"></span>
+
+
+ 
+
+  
+   <button id="play">Restart</button>
+ 
+
+   <!-- controls -->
+
+  <section class="controls1">
+    <button id="up">up </button>
+  </section>
+    <section class="controls2">
+    <button id="left">Left</button>
+    <button id="right">right </button>
+  </section>
+  <section class="controls3">
+   <button id="down">down </button>
+  </section>
+
+  
+  <!-- game over  -->
+  <section id="gameEnd">
+    <h1 class="gameOverTitle">GAME OVER</h1>
+    <button class="gameOverBtn">Play Again?</button>
+  </section>
+
+<!-- script tags -->
+  <script type="text/javascript" src="js/jsFunction/gameScore&gameEnd.js"></script>
+
+  <script type="text/javascript" src="js/jsFunction/playButton&Time.js"></script>
+
+  <script type="text/javascript" src="js/jsFunction/fruit.js"></script>
+
+  <script type="text/javascript" src="js/jsFunction/controlKeys.js"></script>
+
+  <script type="text/javascript" src="js/jsFunction/snake.js"></script>
+
+
+  <!-- The main js file -->
+
+
+  <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+
+</html>

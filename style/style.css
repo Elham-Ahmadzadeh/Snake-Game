@@ -1,0 +1,83 @@
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    height: 100vh;
+    width: 100vw;
+} 
+
+
+body {
+ 
+    background: radial-gradient(#333, #111);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font: 100% sans-serif;  
+}
+
+.designCanvas,
+.controls1, 
+.controls2,
+.controls3, 
+#play, 
+#time, 
+#score,
+.gameTitle {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.gameTitle {
+    
+    margin: 20px;
+}
+/*  {
+    width: 65px;
+    height: 60px;
+    line-height: 60px;
+
+} */
+
+
+#canvas { 
+    /* this width makes the canvas responsive */
+   /*  width: 80vmin; */
+    border: solid 1px red;
+}
+
+
+#play,
+#left,
+#up,
+#right,
+#down  {
+    margin: 20 auto;
+    padding: 20px 20px;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    background: #06eb6d;
+}
+#play {
+    margin: 0 auto;
+}
+
+{
+   display: flex;
+   justify-content: right;
+   align-items: flex-end; 
+}
+
+
+
