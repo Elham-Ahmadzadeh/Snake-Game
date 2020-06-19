@@ -1,7 +1,9 @@
 let snakeDraw = function () {
-    this.x = 0;
+    // rectangle snake
+    this.x = 0;   // to place snake on top left angle of the canvas
     this.y = 0;
-    this.xSpeed = scale * 1;
+    // snake should be able to move
+    this.xSpeed = scale * 1;  
     this.ySpeed = 0;
 
 
@@ -40,10 +42,9 @@ let snakeDraw = function () {
 
         for (let i = 0; i < this.tail.length - 1; i++) {
             this.tail[i] = this.tail[i + 1];
-
         }
 
-
+   // when ever the snake eats fruit grows
 
         this.tail[this.totalAmountOfFruit - 1] = {
             x: this.x,
@@ -54,7 +55,7 @@ let snakeDraw = function () {
         this.y += this.ySpeed
 
         if (this.x > canvas.width) {
-            this.x = 0; // we see that the snake comes back in the x direction.we should copy this four times for every part 
+            this.x = 0;  // we see that the snake comes back in the x direction.we should copy this four times for every part 
         }
         if (this.y > canvas.height) {
             this.y = 0;
@@ -64,10 +65,7 @@ let snakeDraw = function () {
         }
         if (this.y < 0) {
             this.y = canvas.height;
-        }
-
-
-       
+        } 
 
     }
 
@@ -119,5 +117,3 @@ let snakeDraw = function () {
 };
 
 
-
-//****************************************************

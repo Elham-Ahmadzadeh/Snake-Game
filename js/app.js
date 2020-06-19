@@ -1,38 +1,15 @@
-/*
 
-Set up the canvas
-Set score to Zero
-Create snake
-Create apple
 
-Every 100 millisceseconds {
-   
-    Draw current score on the screen 
-    Move snake in current direction
-    
-    
-      if snake eats an
-    Draw apple {
-        add one to score 
-        Move apple to new location
-        Make snake longer
-    }
+/* 
 
-    For each segment of the snake {
-        Draw the segment 
-    }
+// creating canvas on js
 
-    Draw apple 
-    Draw border
+function canvas() {
+    createCanvas(66, 600);
 
-  }
-
-When the user press a key {
-    If the key is an arrow {
-        Update the direction of the snake
-    }
 }
-
+function drawCanvas() {
+    background(51); // short from rgb(51, 51, 51); the resut we get a gray canvas with the size of 600 X 600
 }
 
 */
@@ -80,6 +57,7 @@ setTimeout(timer,1000);  // after 1 sec timer starts counting
 
 //THE ARRAY CONSTRUCTOR CREATES NEW ARRAYS DEPENDING ON ARGUMENTS IT RECEIVES
     snake = new snakeDraw();
+    
     fruit = new fruit();
 
     fruit.pickLocation();
@@ -106,12 +84,12 @@ setTimeout(timer,1000);  // after 1 sec timer starts counting
 
             fruit.pickLocation();
              scoreCounting();
-           
+             checkScore();
             //*************************************** */
 
           
         }
-    }, 250);
+    }, 200); // speed the snake while moving
   
 }());
 
