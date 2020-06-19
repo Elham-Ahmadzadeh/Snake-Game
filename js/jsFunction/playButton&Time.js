@@ -11,6 +11,7 @@ let timer = function() {
         seconds ++
 
         if( seconds === 60) {
+            seconds = 0;
             minutes++;
         }
 
