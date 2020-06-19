@@ -10,7 +10,7 @@ let timer = function() {
     
         seconds ++
 
-        if( seconds === 60) {
+        if( seconds === 61) {
             seconds = 0;
             minutes++;
         }
