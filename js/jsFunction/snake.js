@@ -15,7 +15,7 @@ let snakeDraw = function () {
     this.draw = function () {
         ctx.fillStyle = 'lightgreen';
 
-
+   
         //****************** ***********************/
         // Loop through the tail and draw a rectangle for the tail
 
@@ -28,6 +28,7 @@ let snakeDraw = function () {
     }
 
 
+   
     //************************************************** 
 
     // Update function to handle the snake on
@@ -42,7 +43,7 @@ let snakeDraw = function () {
 
         for (let i = 0; i < this.tail.length - 1; i++) {
             this.tail[i] = this.tail[i + 1];
-        }
+        };
 
    // when ever the snake eats fruit grows
 
@@ -99,6 +100,7 @@ let snakeDraw = function () {
                 this.xSpeed = -scale * 1;
                 this.ySpeed = 0;
                 break;
+
         }
     };
 
@@ -113,6 +115,25 @@ let snakeDraw = function () {
         }
 
         return false;
+    }
+  
+
+    // snake collision
+    this.selfCollision = function() {    // we use this for this function.this comes back to  the main function. if we dont use this 
+                                        // the function never uses.
+
+        for (var i = 0; i < this.tail.length; i++) {
+             if (this.x === this.tail[i].x &&
+                this.y === this.tail[i].y)  {
+                 alert('GAME OVER. Do you want to play again'); 
+                 clearCanvas();
+                 gameScore = 0;
+                 this.tail = [];
+                
+
+           }
+            
+        }
     }
 };
 

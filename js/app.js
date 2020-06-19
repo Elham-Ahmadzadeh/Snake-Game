@@ -5,7 +5,7 @@
 // creating canvas on js
 
 function canvas() {
-    createCanvas(66, 600);
+    createCanvas(600, 600);
 
 }
 function drawCanvas() {
@@ -23,12 +23,10 @@ const canvas = document.getElementById('canvas'),
     right = document.getElementById('right'),
     up = document.getElementById('up'),
     down = document.getElementById('down'),
-    gameEnd = document.getElementById('gameEnd').style.display = 'none',
-    gameOverBtn = document.querySelector('#gameOverBtn'),
     ctx = canvas.getContext("2d"),
     
   
-    scale = 10,
+    scale = 10,   // THE SIZE OF TWO RECTANGLES
     rows = canvas.height / scale,
     columns = canvas.width / scale;
 
@@ -62,7 +60,9 @@ setTimeout(timer,1000);  // after 1 sec timer starts counting
 
     fruit.pickLocation();
 
-    console.log(fruit); // we gonna use the x and y of the fruit inside our codes
+    //console.log(fruit); // we gonna use the x and y of the fruit inside our codes
+   
+
 
     window.setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -89,7 +89,11 @@ setTimeout(timer,1000);  // after 1 sec timer starts counting
 
           
         }
+
+        snake.selfCollision();
+
     }, 200); // speed the snake while moving
+
   
 }());
 

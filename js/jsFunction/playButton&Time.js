@@ -10,7 +10,7 @@ let timer = function() {
     
         seconds ++
 
-        if( seconds === 61) {
+        if( seconds === 60) {
             seconds = 0;
             minutes++;
           
@@ -22,7 +22,7 @@ let timer = function() {
     
 };
 
-// to make it more challengable
+// to make it harder
 
 let checkScore = function() {
     if ( score === 8  ) {
