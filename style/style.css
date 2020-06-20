@@ -18,7 +18,7 @@ body {
    
     background: radial-gradient(#333, #111);
     font-family: 'indie Flower', cursive; 
-    font-size: 28px;
+    font-size: 35px;
     color: white;
 }
 
@@ -30,7 +30,7 @@ body {
 #time, 
 #score,
 .gameTitle {
-   
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,12 +73,12 @@ body {
 }
 h1,
 #play { 
-    color:  #09f071; 
-    text-shadow: #09f071; 
-    font-size: 23px; 
+    color:  #09f071;   
 }
+
 h1 { 
     font-size: 60px; 
+
 }
 
 
