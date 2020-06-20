@@ -18,7 +18,7 @@ body {
    
     background: radial-gradient(#333, #111);
     font-family: 'indie Flower', cursive; 
-    font-size: 35px;
+    font-size: 20px;
     color: white;
 }
 
@@ -45,7 +45,7 @@ body {
 
 #canvas { 
     /* this width makes the canvas responsive */
-   /*  width: 80vmin; */
+    width: 94vmin; 
     border: solid 1px  rgb(40, 6, 230);
 }
 
@@ -60,11 +60,10 @@ body {
     padding: 28px 28px;
     border: none;
     border-radius: 50%;
-    font-size: large;
+    font-size: 25px;
     color: white; 
     background: rgb(41, 6, 243);
    letter-spacing: 3px;
-   font-size: large;
     box-shadow: 0 5px 50px 0 rgb(40, 4, 240) inset;
     
 }
@@ -78,6 +77,19 @@ h1,
 
 h1 { 
     font-size: 60px; 
+
+}
+@media only screen and (min-width: 200px) {
+    #play,
+    #left,
+    #up,
+    #right,
+    #down {
+        padding: 8px 8px;
+    } 
+    h1 {
+        font-size: 35px;
+    }
 
 }
 
