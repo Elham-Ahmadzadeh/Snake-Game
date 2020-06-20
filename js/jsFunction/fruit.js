@@ -10,7 +10,7 @@ function fruit() {
     }
 
     this.draw = function() {
-        ctx.fillStyle = '#ea1b1b'; 
+        ctx.fillStyle = 'white'; 
         ctx.fillRect (this.x, this.y, scale, scale)
 
     }

@@ -13,7 +13,7 @@ let snakeDraw = function () {
 
   
     this.draw = function () {
-        ctx.fillStyle = 'lightgreen';
+        ctx.fillStyle = '#06eb6d';
 
    
         //****************** ***********************/
