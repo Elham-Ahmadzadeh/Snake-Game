@@ -121,18 +121,22 @@ let snakeDraw = function () {
     // snake collision
     this.selfCollision = function() {    // we use this for this function.this comes back to  the main function. if we dont use this 
                                         // the function never uses.
+         for (let i = 0; i < this.tail.length; i++) {
 
-        for (var i = 0; i < this.tail.length; i++) {
              if (this.x === this.tail[i].x &&
-                this.y === this.tail[i].y)  {
-                 alert('GAME OVER. Do you want to play again'); 
-                 clearCanvas();
-                 gameScore = 0;
-                 this.tail = [];
-                
+                this.y === this.tail[i].y)  
+                {
+                clearCanvas(); 
+                /*setTimeout(function() {
+                  alert('GAME OVER. Your score was' + ' ' + score + ' ' +' and it took ' + '' + minutes + '' +
+                 'mins and '+ '' + seconds +'sec.' + ' ' + 'Do you want to play again?!');
+                    }, 500);  */
+                    score = 0;
+                    seconds = 0;
+                    minutes = 0;
+                 gameScore.innerHTML = 'Score: 0';
+                }
 
-           }
-            
         }
     }
 };

@@ -25,6 +25,7 @@ let timer = function() {
 // to make it harder
 
 let checkScore = function() {
+    
     if ( score === 8  ) {
         window.setInterval(() =>  {   // window put the speed
           
@@ -57,7 +58,7 @@ let checkScore = function() {
  
     }, 150)
 
-} else if ( score === 25 )
+} else if ( score === 25 ) {
 window.setInterval(() =>  {
           
             
@@ -72,12 +73,25 @@ window.setInterval(() =>  {
   
 
 }, 130)
-};
+
+}      
+}
+ const visibleBtns = function() {
+     if(up.style.display === 'none' && down.style.display === 'none' 
+       && left.style.display === 'none' && right.style.display === 'none' )
+        {
+       up.style.display = 'block';
+       down.style.display = 'block';
+       right.style.display = 'block';
+       left.style.display = 'block';
+     }
+ }
 
 
 //playButton
 
  const restart  = function() {
+    visibleBtns();
     score = 0;
     seconds= 0;
     minutes = 0;
@@ -85,7 +99,7 @@ window.setInterval(() =>  {
     gameScore.innerHTML = 'Score: 0';
     snake = new snakeDraw(); // To remove the snakes tail 
     fruit.pickLocation();// to random the fruit
-
+   
 }; 
 
 

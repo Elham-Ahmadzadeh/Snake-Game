@@ -45,7 +45,8 @@ body {
 
 #canvas { 
     /* this width makes the canvas responsive */
-    width: 94vmin; 
+    max-width: 50%;
+  
     border: solid 1px  rgb(40, 6, 230);
 }
 

@@ -1,7 +1,4 @@
-
-
 /* 
-
 // creating canvas on js
 
 function canvas() {
@@ -51,10 +48,12 @@ var snake;
 
 (function setup() {   // Local Function
 
+
 setTimeout(timer,1000);  // after 1 sec timer starts counting
 
 //THE ARRAY CONSTRUCTOR CREATES NEW ARRAYS DEPENDING ON ARGUMENTS IT RECEIVES
-    snake = new snakeDraw();
+   
+snake = new snakeDraw();
     
     fruit = new fruit();
 
@@ -69,13 +68,13 @@ setTimeout(timer,1000);  // after 1 sec timer starts counting
         fruit.draw();
         snake.upDate();
         snake.draw();
-
+       
         //***************************************** */
 
         // The snake should become longer after eating the fruit so we need if condition here.
 
         //**************************************** */
-        if (snake.eat(fruit)) {
+        if (snake.eat(fruit) && score < 8  ) {
           
             //console.log('EATING'); // when the snake hits the fruit it prints eating 
 
