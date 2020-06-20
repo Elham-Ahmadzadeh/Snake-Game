@@ -10,11 +10,11 @@ let snakeDraw = function () {
     //to make the snake longer
     this.totalAmountOfFruit = 0; //eaten by the snake
     this.tail = [];
-
+   
   
     this.draw = function () {
-        ctx.fillStyle = '#06eb6d';
-
+        ctx.fillStyle = '#06eb6d'; // the color of the snake
+       
    
         //****************** ***********************/
         // Loop through the tail and draw a rectangle for the tail
@@ -23,12 +23,11 @@ let snakeDraw = function () {
 
             ctx.fillRect(this.tail[i].x, this.tail[i].y, scale, scale);
         }
-        //****************************************** */
+        // to create a tail by filling rectangle
+        //
         ctx.fillRect(this.x, this.y, scale, scale);
     }
 
-
-   
     //************************************************** 
 
     // Update function to handle the snake on
@@ -69,17 +68,12 @@ let snakeDraw = function () {
         } 
 
     }
-
-  
-
-
     //******************************************** */
 
     // The keys for controlling the snake. It is located in snakeDraw function. the other codes of controling the snake are located in 
     // controlKeys
 
     //********************************************** */
-
     this.changeDirection = function (direction) {
         switch (direction) {
 
@@ -119,6 +113,8 @@ let snakeDraw = function () {
   
 
     // snake collision
+  let button = document.querySelector('div');
+  button.style.display = 'none'
     this.selfCollision = function() {    // we use this for this function.this comes back to  the main function. if we dont use this 
                                         // the function never uses.
          for (let i = 0; i < this.tail.length; i++) {
@@ -126,7 +122,15 @@ let snakeDraw = function () {
              if (this.x === this.tail[i].x &&
                 this.y === this.tail[i].y)  
                 {
-                clearCanvas(); 
+                    clearCanvas();
+                  
+               if(button.style.display === 'none'){
+               button.style.display = 'block' ;
+               canvas.style.display = 'none';
+               button.innerText = 'GAME OVER. You see your score above and the time it took down here. '  +  ' ' +'Do you want to play again?!'
+               button.style.textAlign = 'center';
+               clearInterval(timer);
+            }
                 /*setTimeout(function() {
                   alert('GAME OVER. Your score was' + ' ' + score + ' ' +' and it took ' + '' + minutes + '' +
                  'mins and '+ '' + seconds +'sec.' + ' ' + 'Do you want to play again?!');
@@ -134,7 +138,7 @@ let snakeDraw = function () {
                     score = 0;
                     seconds = 0;
                     minutes = 0;
-                 gameScore.innerHTML = 'Score: 0';
+                 
                 }
 
         }

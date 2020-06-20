@@ -10,14 +10,11 @@ let scoreCounting = function() {
 
 // CLEAR CANVAS
 
-controls2 = document.querySelector('#controls2'),
-controls3 = document.querySelector('#controls3');
 let clearCanvas = function() {
-ctx.fillStyle = '#000';
-ctx.textBaseline = 'middle';
-ctx.fillText('Game Over!!', 175, 150, 300);
-ctx.strokeStyle = 'white';
-ctx.font = 'bold 60px';
+
+
+
+ctx.font = 'bold 100px';
 up.style.display = 'none';
 down.style.display = 'none';
 left.style.display = 'none';

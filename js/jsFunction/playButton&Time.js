@@ -1,10 +1,6 @@
 // time
 let minutes = 0,
     seconds = 0;
-
-
-
-
 let timer = function() {
     timer = setInterval(function(){
     
@@ -74,12 +70,16 @@ window.setInterval(() =>  {
 
 }, 130)
 
-}      
+}  
+
+
+//visible btns
+
 }
  const visibleBtns = function() {
      if(up.style.display === 'none' && down.style.display === 'none' 
        && left.style.display === 'none' && right.style.display === 'none' )
-        {
+    {
        up.style.display = 'block';
        down.style.display = 'block';
        right.style.display = 'block';
@@ -91,7 +91,11 @@ window.setInterval(() =>  {
 //playButton
 
  const restart  = function() {
+     if( canvas.style.display === 'none') {
+         canvas.style.display = 'block';
+     }
     visibleBtns();
+   
     score = 0;
     seconds= 0;
     minutes = 0;

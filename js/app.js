@@ -20,17 +20,18 @@ const canvas = document.getElementById('canvas'),
     right = document.getElementById('right'),
     up = document.getElementById('up'),
     down = document.getElementById('down'),
+    // return a two dimensional drawing context
     ctx = canvas.getContext("2d"),
-    
-  
-    scale = 10,   // THE SIZE OF TWO RECTANGLES
+    scale = 10,   // THE scale OF snake and apple
     rows = canvas.height / scale,
     columns = canvas.width / scale;
+    
 
 
 let gameScore = document.getElementById('score');
 
-let timeStart = Date.now();
+
+
 
 var snake;
 
@@ -64,6 +65,8 @@ snake = new snakeDraw();
 
 
     window.setInterval(() => {
+       
+        //clear specified pixels within a given rectangle otherwise it rewrites a rectangle.
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         fruit.draw();
         snake.upDate();
